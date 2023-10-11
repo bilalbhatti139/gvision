@@ -1,503 +1,951 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>gvision</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>gvision</title>
-</head>
+  <body>
+    <div
+      class="w-full h-full bg-cover bg-no-repeat bg-contain h-full min-h-[971px]"
+      style="background-image: url('./src/assets/images/bg.png')"
+    >
+      <div class="flex justify-end items-center p-4">
+        <img
+          id="englishFlag"
+          class="cursor-pointer flag-icon"
+          src="./src/assets/images/united-states.png"
+          alt="English Flag"
+          data-lang="english"
+        />
+        <img
+          id="dutchFlag"
+          class="cursor-pointer flag-icon p-4"
+          src="./src/assets/images/netherlands.png"
+          alt="Dutch Flag"
+          data-lang="dutch"
+        />
+        <img
+          id="frenchFlag"
+          class="cursor-pointer flag-icon"
+          src="./src/assets/images/france.png"
+          alt="French Flag"
+          data-lang="french"
+        />
+      </div>
 
-<body>
-  <div class="w-full h-full bg-cover bg-no-repeat bg-contain h-full min-h-[971px]"
-    style="background-image: url('./src/assets/images/bg.png')">
+      <div class="pt-2 lg:pb-24 pb-12">
+        <!-- English -->
+        <p
+          style="display: block"
+          class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5 language"
+          data-lang="english"
+        >
+          Who’s responsible for the Computers ? the Printers ? the Phones ? the
+          Alarm and the Security Camera’s ?
+          <br />Don’t waste your time to find the right contact !!
+        </p>
+        <!-- Dutch -->
+        <p
+          id="dutchText"
+          style="display: none"
+          class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5 language"
+          data-lang="dutch"
+        >
+          computerstoringen, e-mails, printers, telefoonproblemen, alarmsystemen
+          en camera's? Krijg je het niet meer geregeld met al je verschillende
+          serviceproviders? Maak je geen zorgen, wij zijn er om te helpen.
+        </p>
+        <!-- French -->
+        <p
+          id="frenchText"
+          style="display: none"
+          class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5 language"
+          data-lang="french"
+        >
+          Qui s’occupe des pannes informatiques, des mails, des imprimantes, des
+          problèmes de téléphonie, de l’alarme et des caméras ? Vous vous en
+          sortez plus avec tous les différents prestataires que vous avez ? Ne
+          vous inquiétez plus, nous sommes là pour vous.
+        </p>
+      </div>
 
-    <div class="flex justify-end items-center p-4">
-      <!-- <p class="text-2xl text-white font-bold leading-tight pr-5">Translate : </p> -->
-      <img id="englishFlag" class="cursor-pointer flag-icon pr-5" src="./src/assets/images/united-states.png" alt="English Flag">
-      <img id="dutchFlag" class="cursor-pointer flag-icon pr-5" src="./src//assets//images/netherlands.png" alt="Dutch Flag">
-      <img id="frenchFlag" class="cursor-pointer flag-icon" src="./src//assets/images/france.png" alt="French Flag">
-    </div>
+      <div class="lg:px-20 px-10">
+        <div class="grid lg:grid-cols-2 grid-cols-1">
+          <div class="flex flex-col justify-center">
+            <div class="text-3xl lg:text-7xl">
+              <!-- english -->
+              <p
+                style="display: block"
+                class="text-2xl text-white font-bold leading-tight language"
+                data-lang="english"
+              >
+                We Act As Your Internal IT Department With a
+              </p>
+              <!-- dutch -->
+              <p
+                id="dutchText"
+                style="display: none"
+                class="text-2xl text-white font-bold leading-tight language"
+                data-lang="dutch"
+              >
+                Wij fungeren als uw interne IT-afdeling met een
+              </p>
+              <!-- french -->
+              <p
+                id="frenchText"
+                style="display: none"
+                class="text-2xl text-white font-bold leading-tight language"
+                data-lang="french"
+              >
+                Nous agissons comme votre propre département IT avec un
+              </p>
 
-    <div class="pt-2 lg:pb-24 pb-12">
-      <!-- English -->
-      <p id="englishText" style="display: block;" class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5">
-  Who’s responsible for the Computers ? the Printers ? the Phones ? the Alarm and the Security Camera’s ? <br />Don’t waste your time to find the right contact !! 
-      </p>
-      <!-- Dutch -->
-      <p id="dutchText" style="display: none;" class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5">
-        computerstoringen, e-mails, printers, telefoonproblemen, alarmsystemen en camera's? Krijg je het niet meer geregeld met al je verschillende serviceproviders? Maak je geen zorgen, wij zijn er om te helpen. 
-      </p>
-      <!-- French -->
-      <p id="frenchText" style="display: none;" class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5">
-        Qui s’occupe des pannes informatiques, des mails, des imprimantes, des problèmes de téléphonie, de l’alarme et des caméras ? Vous vous en sortez plus avec tous les différents prestataires que vous avez ?
-        Ne vous inquiétez plus, nous sommes là pour vous. 
-      </p>
-    </div>
+              <h1
+                style="display: block"
+                class="text-white font-bold leading-tight capitalize language"
+                data-lang="english"
+              >
+                Single Point Of contact for all
+                <span class="font-bold text-[#98EA98]"> Your Needs</span>
+              </h1>
 
-    <div class="lg:px-20 px-10">
-      <div class="grid lg:grid-cols-2 grid-cols-1">
-        <div class="flex flex-col justify-center">
-          <div class="text-3xl lg:text-7xl ">
-            <p class="text-2xl text-white font-bold leading-tight">We Act As Your Internal IT Department With a</p>
-            <h1 class="text-white font-bold leading-tight capitalize">
-              Single Point Of contact for all <span class="font-bold text-[#98EA98]"> Your Needs</span>
-            </h1>
-          </div>
-          <div class="mt-4 lg:mb-0 mb-4">
-            <a href="tel:+32(0)23159660"><img srcset="./src/assets/images/contact.png" alt="" /></a>
-            <div class="flex mt-4">
-              <a href="https://maps.app.goo.gl/mP4RKUKoUMgEjLUr7" class="mr-5" target="_blank">
-                <img srcset="./src/assets/images/location.png" alt="" />
-              </a>
+              <h1
+                id="dutchText"
+                style="display: none"
+                class="text-white font-bold leading-tight capitalize language"
+                data-lang="dutch"
+              >
+                Eén enkel nummer voor al
+                <span class="font-bold text-[#98EA98]"> uw behoeften</span>
+              </h1>
+
+              <h1
+                id="frenchText"
+                style="display: none"
+                class="text-white font-bold leading-tight capitalize language"
+                data-lang="french"
+              >
+                Numéro unique pour tous
+                <span class="font-bold text-[#98EA98]"> vos besoins </span>
+              </h1>
+            </div>
+            <div class="mt-4 lg:mb-0 mb-4">
+              <a href="tel:+32(0)23159660"
+                ><img srcset="./src/assets/images/contact.png" alt=""
+              /></a>
+              <div class="flex mt-4">
+                <a
+                  href="https://maps.app.goo.gl/mP4RKUKoUMgEjLUr7"
+                  class="mr-5"
+                  target="_blank"
+                >
+                  <img srcset="./src/assets/images/location.png" alt="" />
+                </a>
                 <a href="mailto:info@gvision.be">
                   <img srcset="./src/assets/images/email.png" alt="" />
                 </a>
               </div>
-          </div>
-          
-        </div>
-        <div class="flex flex-col">
-          <div
-            class="bg-white flex flex-col justify-center items-center py-6 px-6 md:px-28 rounded-lg mb-6 overflow-hidden border-2 lg:max-w-[593px] mx-auto w-full">
-            <div>
-              <img srcset="./src/assets/images/logo-a.png" alt="logo"/>
-            </div>
-            <div class="text-[#004B76] text-base font-medium text-center ">
-              <button
-              id="openModalBtnTwo"
-              class="text-xs font-medium text-[#004B76] hover:text-white px-8 py-2 rounded-lg w-[1220px]:mr-6 mr-0 my-2 ml-0 border border-[#004B76] hover:bg-[#004B76] hover:color-white">
-              Our Services
-            </button>
-            <button
-            class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
-            style="background-image: url('./src/assets/images/button-icon.png'); background-repeat: no-repeat; background-position: 110px 10px;"
-            style="background-image: url('./src/assets/images/white-icon.png'); background-repeat: no-repeat;background-position: 110px 10px;"
-            onmouseover="this.style.backgroundImage = 'url(\'./src/assets/images/white-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
-            onmouseout="this.style.backgroundImage = 'url(\'./src/assets/images/button-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
-          >
-            <span>View Website</span>
-         
-          </button>
-          
-            
             </div>
           </div>
-            <div   class="bg-white flex flex-col justify-center items-center py-6 px-6 md:px-28 rounded-lg mb-6 overflow-hidden border-2 lg:max-w-[593px] mx-auto w-full">
-
+          <div class="flex flex-col">
+            <div
+              class="bg-white flex flex-col justify-center items-center py-6 px-6 md:px-28 rounded-lg mb-6 overflow-hidden border-2 lg:max-w-[593px] mx-auto w-full"
+            >
               <div>
-                <img srcset="./src/assets/images/logo-b.png" alt="logo"/>
+                <img srcset="./src/assets/images/logo-a.png" alt="logo" />
               </div>
-              <div class="text-[#004B76] text-base font-medium text-center ">
-                <button id="openModalBtn"
-                class="text-xs font-medium text-[#004B76] hover:text-white px-8 py-2 rounded-lg w-[1220px]:mr-6 mr-0 my-2 ml-0 border border-[#004B76] hover:bg-[#004B76] hover:color-white">
-                  Our Services
+              <div class="text-[#004B76] text-base font-medium text-center">
+                <button
+                  id="openModalBtnTwo"
+                  class="text-xs font-medium text-[#004B76] hover:text-white px-8 py-2 rounded-lg w-[1220px]:mr-6 mr-0 my-2 ml-0 border border-[#004B76] hover:bg-[#004B76] hover:color-white"
+                >
+                  <span
+                    style="display: block"
+                    data-lang="english"
+                    class="language"
+                  >
+                    Our Services</span
+                  >
+                  <span
+                    id="dutchText"
+                    style="display: none"
+                    class="language"
+                    data-lang="dutch"
+                  >
+                    Onze Diensten
+                  </span>
+                  <span
+                    id="frenchText"
+                    style="display: none"
+                    data-lang="french"
+                    class="language"
+                  >
+                    Nos services
+                  </span>
                 </button>
                 <button
-            class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
-            style="background-image: url('./src/assets/images/button-icon.png'); background-repeat: no-repeat; background-position: 110px 10px;"
-            style="background-image: url('./src/assets/images/white-icon.png'); background-repeat: no-repeat;background-position: 110px 10px;"
-            onmouseover="this.style.backgroundImage = 'url(\'./src/assets/images/white-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
-            onmouseout="this.style.backgroundImage = 'url(\'./src/assets/images/button-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
-          >
-            <span>View Website</span>
-         
-          </button>
+                  class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
+                  style="
+                    background-image: url('./src/assets/images/button-icon.png');
+                    background-repeat: no-repeat;
+                    background-position: 110px 10px;
+                  "
+                  style="
+                    background-image: url('./src/assets/images/white-icon.png');
+                    background-repeat: no-repeat;
+                    background-position: 110px 10px;
+                  "
+                  onmouseover="this.style.backgroundImage = 'url(\'./src/assets/images/white-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
+                  onmouseout="this.style.backgroundImage = 'url(\'./src/assets/images/button-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
+                >
+                  <span
+                    style="display: block"
+                    data-lang="english"
+                    class="language"
+                  >
+                    View Website</span
+                  >
+                  <span
+                    id="dutchText"
+                    style="display: none"
+                    class="language"
+                    data-lang="dutch"
+                  >
+                    Bezoek Website
+                  </span>
+                  <span
+                    id="frenchText"
+                    style="display: none"
+                    data-lang="french"
+                    class="language"
+                  >
+                    Visiter notre site
+                  </span>
+                </button>
               </div>
             </div>
-        
-            <div   class="bg-white flex flex-col justify-center items-center py-6 px-6 md:px-28 rounded-lg mb-6 overflow-hidden border-2 lg:max-w-[593px] mx-auto w-full">
+            <div
+              class="bg-white flex flex-col justify-center items-center py-6 px-6 md:px-28 rounded-lg mb-6 overflow-hidden border-2 lg:max-w-[593px] mx-auto w-full"
+            >
+              <div>
+                <img srcset="./src/assets/images/logo-b.png" alt="logo" />
+              </div>
+              <div class="text-[#004B76] text-base font-medium text-center">
+                <button
+                  id="openModalBtn"
+                  class="text-xs font-medium text-[#004B76] hover:text-white px-8 py-2 rounded-lg w-[1220px]:mr-6 mr-0 my-2 ml-0 border border-[#004B76] hover:bg-[#004B76] hover:color-white"
+                >
+                  <span
+                    style="display: block"
+                    data-lang="english"
+                    class="language"
+                  >
+                    Our Services</span
+                  >
+                  <span
+                    id="dutchText"
+                    style="display: none"
+                    class="language"
+                    data-lang="dutch"
+                  >
+                    Onze Diensten
+                  </span>
+                  <span
+                    id="frenchText"
+                    style="display: none"
+                    data-lang="french"
+                    class="language"
+                  >
+                    Nos services
+                  </span>
+                </button>
+
+                <button
+                  class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
+                  style="
+                    background-image: url('./src/assets/images/button-icon.png');
+                    background-repeat: no-repeat;
+                    background-position: 110px 10px;
+                  "
+                  style="
+                    background-image: url('./src/assets/images/white-icon.png');
+                    background-repeat: no-repeat;
+                    background-position: 110px 10px;
+                  "
+                  onmouseover="this.style.backgroundImage = 'url(\'./src/assets/images/white-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
+                  onmouseout="this.style.backgroundImage = 'url(\'./src/assets/images/button-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
+                >
+                  <span
+                    style="display: block"
+                    data-lang="english"
+                    class="language"
+                  >
+                    View Website</span
+                  >
+                  <span
+                    id="dutchText"
+                    style="display: none"
+                    class="language"
+                    data-lang="dutch"
+                  >
+                    Bezoek Website
+                  </span>
+                  <span
+                    id="frenchText"
+                    style="display: none"
+                    data-lang="french"
+                    class="language"
+                  >
+                    Visiter notre site
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="bg-white flex flex-col justify-center items-center py-6 px-6 md:px-28 rounded-lg mb-6 overflow-hidden border-2 lg:max-w-[593px] mx-auto w-full"
+            >
               <div class="">
-              <div><img srcset="./src/assets/images/development.png" alt="logo"/></div>
-              <div class="text-[#004B76] text-base font-medium text-center ">
-                <button id="openModalBtnThree"
-                class="text-xs font-medium text-[#004B76] hover:text-white px-8 py-2 rounded-lg  w-[1220px]:mr-6 mr-0 my-2 ml-0 border border-[#004B76] hover:bg-[#004B76] hover:color-white">
-                  Our Services
-                </button>
-                <button
-                class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
-                style="background-image: url('./src/assets/images/button-icon.png'); background-repeat: no-repeat; background-position: 110px 10px;"
-                style="background-image: url('./src/assets/images/white-icon.png'); background-repeat: no-repeat;background-position: 110px 10px;"
-                onmouseover="this.style.backgroundImage = 'url(\'./src/assets/images/white-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
-                onmouseout="this.style.backgroundImage = 'url(\'./src/assets/images/button-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
-              >
-                <span>View Website</span>
-             
-              </button>
+                <div>
+                  <img
+                    srcset="./src/assets/images/development.png"
+                    alt="logo"
+                  />
+                </div>
+                <div class="text-[#004B76] text-base font-medium text-center">
+                  <button
+                    id="openModalBtnThree"
+                    class="text-xs font-medium text-[#004B76] hover:text-white px-8 py-2 rounded-lg w-[1220px]:mr-6 mr-0 my-2 ml-0 border border-[#004B76] hover:bg-[#004B76] hover:color-white"
+                  >
+                    <span
+                      style="display: block"
+                      data-lang="english"
+                      class="language"
+                    >
+                      Our Services</span
+                    >
+                    <span
+                      id="dutchText"
+                      style="display: none"
+                      class="language"
+                      data-lang="dutch"
+                    >
+                      Onze Diensten
+                    </span>
+                    <span
+                      id="frenchText"
+                      style="display: none"
+                      data-lang="french"
+                      class="language"
+                    >
+                      Nos services
+                    </span>
+                  </button>
+                  <button
+                    class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
+                    style="
+                      background-image: url('./src/assets/images/button-icon.png');
+                      background-repeat: no-repeat;
+                      background-position: 110px 10px;
+                    "
+                    style="
+                      background-image: url('./src/assets/images/white-icon.png');
+                      background-repeat: no-repeat;
+                      background-position: 110px 10px;
+                    "
+                    onmouseover="this.style.backgroundImage = 'url(\'./src/assets/images/white-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
+                    onmouseout="this.style.backgroundImage = 'url(\'./src/assets/images/button-icon.png\')'; this.style.backgroundRepeat = 'no-repeat'; "
+                  >
+                    <span
+                      style="display: block"
+                      data-lang="english"
+                      class="language"
+                    >
+                      View Website</span
+                    >
+                    <span
+                      id="dutchText"
+                      style="display: none"
+                      class="language"
+                      data-lang="dutch"
+                    >
+                      Bezoek Website
+                    </span>
+                    <span
+                      id="frenchText"
+                      style="display: none"
+                      data-lang="french"
+                      class="language"
+                    >
+                      Visiter notre site
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="flex items-center justify-center lg:justify-start :mt-o mt-6">
-        <a href="https://www.linkedin.com/company/gvision-it/" target="_blank"> <img class="pr-2" srcset="./src/assets/images/linkedin.png" alt="" /></a>
-        
-       
-        <a href="https://www.facebook.com/gvisionbe" target="_blank"><img class="pr-2" srcset="./src/assets/images/facebook.png" alt="" /></a>  
-        <a href="https://www.instagram.com/gvisionbe" target="_blank">   <img class="pr-2" srcset="./src/assets/images/instagram.png" alt="" /></a>  
-      </div>
-      <div>
-        <a href="http://www.gvision.be/" class="text-white text-2xl font-light lg:text-left text-center">www.gvision.be</a> 
-      </div>
-    </div>
-  </div>
-  <!-- modal-content -->
+        <div
+          class="flex items-center justify-center lg:justify-start :mt-o mt-6"
+        >
+          <a
+            href="https://www.linkedin.com/company/gvision-it/"
+            target="_blank"
+          >
+            <img class="pr-2" srcset="./src/assets/images/linkedin.png" alt=""
+          /></a>
 
-  <!-- myh modal -->
-
-  <!-- Modal container -->
-  <div class="fixed inset-0 flex items-center justify-center z-50 hidden" id="modalContainer">
-    <!-- Modal background overlay -->
-    <div class="fixed inset-0 bg-gray-900 opacity-50" id="modalOverlay"></div>
-
-    <!-- Modal content -->
-    <div class="bg-white p-4 rounded-lg shadow-lg z-10 lg:max-w-[1100px] max-w-[370px]   max-h-[670px] overflow-auto">
-      <div class="py-2 px-8">
+          <a href="https://www.facebook.com/gvisionbe" target="_blank"
+            ><img class="pr-2" srcset="./src/assets/images/facebook.png" alt=""
+          /></a>
+          <a href="https://www.instagram.com/gvisionbe" target="_blank">
+            <img class="pr-2" srcset="./src/assets/images/instagram.png" alt=""
+          /></a>
+        </div>
         <div>
-          <h1 class="text-[#004B76] text-2xl font-medium text-center lg:pb-0 pb-4">
-            Our Services 
-          </h1>
-
-          <div class="lg:px-20 px-0">
-            <div class="grid lg:grid-cols-2 grid-cols-1 gap-2">
-              <div>
-                <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                <img class="pb-2 mr-4" srcset="./src/assets/images/cctv.png" alt="" />
-                <div> 
-                <h3 class="text-lg text-[#00000] font-bold">Security Camera
-                </h3>
-                <p class="text-sm text-[#696969] text-justify">We are partnering with the leaders of the Security Camera market to ensure the safety and the security of your businesses and/or homes
-
-                  </p></div>
-                </div>
-                <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                  <img class="pb-2 mr-4" srcset="./src/assets/images/bouton-dalarme.png" alt="" />
-                  <div> 
-                  <h3 class="text-lg text-[#00000] font-bold">Alarm
-                  </h3>
-                  <p class="text-sm text-[#696969] text-justify">With years of expertise in the industry, we understand that your peace of mind is invaluable, and we are committed to delivering top-tier alarm systems and services that ensure your safety.
-                  </p></div>
-                  </div>
-                  <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                    <img class="pb-2 mr-4" srcset="./src/assets/images/detecteur-de-fumee.png" alt="" />
-                    <div> 
-                    <h3 class="text-lg text-[#00000] font-bold">Fire Detection
-                    </h3>
-                    <p class="text-sm text-[#696969] text-justify">we offer state-of-the-art fire detection systems that provide early warning, rapid response, and peace of mind
-
-
-                    </p></div>
-                    </div>
-              </div>
-
-
-              <div>
-                <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                <img class="pb-2 mr-4 " srcset="./src/assets/images/card-key.png" alt="" />
-                <div> 
-                <h3 class="text-lg text-[#00000] font-bold">Access Control</h3>
-                <p class="text-sm text-[#696969] text-justify">Get rid of traditional keys with an access control system. You can allow or deny access and let your employees go where and when they need to go
-
-                </p></div>
-                </div>
-                <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                  <img class="pb-2 mr-2" srcset="./src/assets/images/intercom1.png" alt="" />
-                  <div> 
-                  <h3 class="text-lg text-[#00000] font-bold">Intercom
-                  </h3>
-                  <p class="text-sm text-[#696969] text-justify">From residential complexes to commercial buildings, we provide an extensive range of intercom products. Our systems also provide features such as remote access and visitor management
-
-
-                  </p></div>
-                  </div>
-                  <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                    <img class="mr-4" srcset="./src/assets/images/help-desk.png" alt="" />
-                    <div> 
-                    <h3 class="text-lg text-[#00000] font-bold">SUPPORT
-                    </h3>
-                    <p class="text-sm text-[#696969] text-justify">After the installation, our technicians come every year to keep your material in optimal condition. We also assume the support of our installations with a dedicated customer service team and a 24/7 reachable hotline.
-
-                      
-                    </p></div>
-                    </div>
-              </div>
-            
-
-            </div>
-          </div>
+          <a
+            href="http://www.gvision.be/"
+            class="text-white text-2xl font-light lg:text-left text-center"
+            >www.gvision.be</a
+          >
         </div>
-        <!-- Close button -->
-        <div class="text-center">
-        <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
-          id="closeModalBtn">
-          Close
-        </button>
-      </div>
       </div>
     </div>
-    </div>
+    <!-- modal-content -->
 
+    <!-- myh modal -->
 
-
-    <div class="fixed inset-0 flex items-center justify-center z-50 hidden max-w-[1100px] mx-auto"  id="modalContainer3">
+    <!-- Modal container -->
+    <div
+      class="fixed inset-0 flex items-center justify-center z-50 hidden"
+      id="modalContainer"
+    >
       <!-- Modal background overlay -->
       <div class="fixed inset-0 bg-gray-900 opacity-50" id="modalOverlay"></div>
-  
+
       <!-- Modal content -->
-      <div class="bg-white p-4 rounded-lg shadow-lg z-10 lg:max-w-[1100px] max-w-[370px]   max-h-[770px] overflow-auto">
+      <div
+        class="bg-white p-4 rounded-lg shadow-lg z-10 lg:max-w-[1100px] max-w-[370px] max-h-[670px] overflow-auto"
+      >
         <div class="py-2 px-8">
           <div>
-            <h1 class="text-[#004B76] text-2xl font-medium text-center lg:pb-0 pb-4">
-              Our Services 
+            <h1
+              class="text-[#004B76] text-2xl font-medium text-center lg:pb-0 pb-4"
+            >
+              Our Services
             </h1>
 
             <div class="lg:px-20 px-0">
               <div class="grid lg:grid-cols-2 grid-cols-1 gap-2">
                 <div>
-                  <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                  <img class="pb-2 mr-4" srcset="./src/assets/images/web-development.png" alt="" />
-                  <div> 
-                  <h3 class="text-lg text-[#00000] font-bold">Websites</h3>
-                  <p class="text-sm text-[#696969] text-justify">We are building and maintaining websites, ensuring that they are visually appealing, easy to navigate, and perform well.
-                    In other words, we are creating the digital presence that your business needs to succeed.
-                    </p></div>
-                  </div>
-                  <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                    <img class="pb-2 mr-4" srcset="./src/assets/images/online-shop.png" alt="" />
-                    <div> 
-                    <h3 class="text-lg text-[#00000] font-bold">E-commerce
-                    </h3>
-                    <p class="text-sm text-[#696969] text-justify">We are creating robust online shopping platforms that seamlessly integrate user-friendly interfaces with secure payment systems, enabling businesses to expand their online presence and boost sales.
-                    </p></div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4"
+                      srcset="./src/assets/images/cctv.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">
+                        Security Camera
+                      </h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        We are partnering with the leaders of the Security
+                        Camera market to ensure the safety and the security of
+                        your businesses and/or homes
+                      </p>
                     </div>
-                    <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                      <img class="pb-2 mr-4" srcset="./src/assets/images/cloud-server.png" alt="" />
-                      <div> 
-                        <h3 class="text-lg text-[#00000] font-bold">Hosting
-                        </h3>
-                        <p class="text-sm text-[#696969] text-justify">We’re providing high-speed servers and robust security measures. Whether you need a cozy spot for your personal blog or a robust hosting solution for your business, we've got the hosting expertise to keep your online presence running smoothly
-    
-                        </p></div>
-                      </div>
+                  </div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4"
+                      srcset="./src/assets/images/bouton-dalarme.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">Alarm</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        With years of expertise in the industry, we understand
+                        that your peace of mind is invaluable, and we are
+                        committed to delivering top-tier alarm systems and
+                        services that ensure your safety.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4"
+                      srcset="./src/assets/images/detecteur-de-fumee.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">
+                        Fire Detection
+                      </h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        we offer state-of-the-art fire detection systems that
+                        provide early warning, rapid response, and peace of mind
+                      </p>
+                    </div>
+                  </div>
                 </div>
-
 
                 <div>
-                  <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                  <img class="pb-2 mr-4 " srcset="./src/assets/images/planning.png" alt="" />
-                  <div> 
-                  <h3 class="text-lg text-[#00000] font-bold">Consulting</h3>
-                  <p class="text-sm text-[#696969] text-justify">We're your go-to web consulting crew, helping businesses figure out the online game plan. From boosting websites to giving advice on web strategies, we're here to make the web work better for you.
-                  </p></div>
-                  </div>
-                  <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                    <img class="pb-2 mr-2" srcset="./src/assets/images/app-development.png" alt="" />
-                 
-                    <div> 
-                      <h3 class="text-lg text-[#00000] font-bold">Desktop & Mobile Applications
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4"
+                      srcset="./src/assets/images/card-key.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">
+                        Access Control
                       </h3>
-                      <p class="text-sm text-[#696969] text-justify">We're all about making cool apps for both your computer and your phone. Whether you're on a PC or scrolling on your mobile, we've got you covered with awesome APPS that's easy to use.
-
-                      </p></div>
+                      <p class="text-sm text-[#696969] text-justify">
+                        Get rid of traditional keys with an access control
+                        system. You can allow or deny access and let your
+                        employees go where and when they need to go
+                      </p>
                     </div>
-                    <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                      <img class="mr-4" srcset="./src/assets/images/help-desk.png" alt="" />
-                      <div> 
-                      <h3 class="text-lg text-[#00000] font-bold">SUPPORT
-                      </h3>
-                      <p class="text-sm text-[#696969] text-justify">We have a team of experts who are dedicated to keeping your website running smoothly and looking great.
-                        We're here to help you with any technical problems or questions, so you can focus on your business.
-                        
-                      </p></div>
-                      </div>
+                  </div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-2"
+                      srcset="./src/assets/images/intercom1.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">Intercom</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        From residential complexes to commercial buildings, we
+                        provide an extensive range of intercom products. Our
+                        systems also provide features such as remote access and
+                        visitor management
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="mr-4"
+                      srcset="./src/assets/images/help-desk.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">SUPPORT</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        After the installation, our technicians come every year
+                        to keep your material in optimal condition. We also
+                        assume the support of our installations with a dedicated
+                        customer service team and a 24/7 reachable hotline.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              
-
               </div>
             </div>
           </div>
           <!-- Close button -->
           <div class="text-center">
-          <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
-            id="closeModalBtnThree">
-            Close
-          </button>
-        </div>
+            <button
+              class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+              id="closeModalBtn"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
-      </div>
+    </div>
 
-
-    <div class="fixed inset-0 flex items-center justify-center z-50 hidden  mx-auto  m-auto" id="modalContainer2">
+    <div
+      class="fixed inset-0 flex items-center justify-center z-50 hidden max-w-[1100px] mx-auto"
+      id="modalContainer3"
+    >
       <!-- Modal background overlay -->
       <div class="fixed inset-0 bg-gray-900 opacity-50" id="modalOverlay"></div>
 
       <!-- Modal content -->
-      <div class="bg-white p-4 rounded-lg shadow-lg z-10 lg:max-w-[1100px] max-w-[370px]   max-h-[670px] overflow-auto">
+      <div
+        class="bg-white p-4 rounded-lg shadow-lg z-10 lg:max-w-[1100px] max-w-[370px] max-h-[770px] overflow-auto"
+      >
         <div class="py-2 px-8">
           <div>
-            <h1 class="text-[#004B76] text-2xl font-medium text-center lg:pb-0 pb-4">
-              Our Services 
+            <h1
+              class="text-[#004B76] text-2xl font-medium text-center lg:pb-0 pb-4"
+            >
+              Our Services
             </h1>
 
             <div class="lg:px-20 px-0">
               <div class="grid lg:grid-cols-2 grid-cols-1 gap-2">
                 <div>
-                   <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                  <img class="pb-2 mr-4 lg:mt-2" srcset="./src/assets/images/ms.png" alt="" />
-                  <div> 
-                  <h3 class="text-lg text-[#00000] font-bold">Microsoft</h3>
-                  <p class="text-sm text-[#696969] text-justify">As a Microsoft Partner, we provide any type of consulting services, deployment, support and
-                    training for products such as Microsoft & Windows 365, Azure, Teams, Defender</p></div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4"
+                      srcset="./src/assets/images/web-development.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">Websites</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        We are building and maintaining websites, ensuring that
+                        they are visually appealing, easy to navigate, and
+                        perform well. In other words, we are creating the
+                        digital presence that your business needs to succeed.
+                      </p>
+                    </div>
                   </div>
-                 
-                  <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                      <img class="pb-2 mr-4" srcset="./src/assets/images/antivirus.png" alt="" />
-                      <div> 
-                      <h3 class="text-lg text-[#00000] font-bold">Security
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4"
+                      srcset="./src/assets/images/online-shop.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">
+                        E-commerce
                       </h3>
-                      <p class="text-sm text-[#696969] text-justify">We are a proud partner of SOPHOS, the leader of the cyber security Industry. Let’s make your environment safer and your data secure
-                      </p></div>
-                      </div>
-                      <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                        <img class="pb-2 mr-4  mt-0" srcset="./src/assets/images/crp.png" alt="" />
-                        <div> 
-                        <h3 class="text-lg text-[#00000] font-bold">ERP & CRM</h3>
-                        <p class="text-sm text-[#696969] text-justify">We are the only Distributor in Belgium of AKEAD, an All-in-One ERP, POS Solution software.</p></div>
-                        </div>
+                      <p class="text-sm text-[#696969] text-justify">
+                        We are creating robust online shopping platforms that
+                        seamlessly integrate user-friendly interfaces with
+                        secure payment systems, enabling businesses to expand
+                        their online presence and boost sales.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4"
+                      srcset="./src/assets/images/cloud-server.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">Hosting</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        We’re providing high-speed servers and robust security
+                        measures. Whether you need a cozy spot for your personal
+                        blog or a robust hosting solution for your business,
+                        we've got the hosting expertise to keep your online
+                        presence running smoothly
+                      </p>
+                    </div>
+                  </div>
                 </div>
-
 
                 <div>
-                  <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                    <img class="pb-2 mr-4" srcset="./src/assets/images/infrastructuree.png" alt="" />
-                    <div> 
-                    <h3 class="text-lg text-[#00000] font-bold">Infrastructure
-                    </h3>
-                    <p class="text-sm text-[#696969] text-justify">With more than 20 years of experience, we provide any type of support for your IT infrastructure such as Computers, Servers, Storage, Backup and Network
-                    </p></div>
-                    </div>
-                 
-                    <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                    <img class="pb-2 mr-2" srcset="./src/assets/images/voiip.png" alt="" />
-                    <div> 
-                    <h3 class="text-lg text-[#00000] font-bold">VOIP
-                    </h3>
-                    <p class="text-sm text-[#696969] text-justify">Partnering with 3CX, we offer a comprehensive suite of unified communication tools that can help your business improve your efficiency and productivity.
-                    </p></div>
-                    </div>
-                    <div class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7  p-2 py-4"> 
-                      <img class="mr-4" srcset="./src/assets/images/soutien-technique.png" alt="" />
-                      <div> 
-                      <h3 class="text-lg text-[#00000] font-bold">SUPPORT
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4"
+                      srcset="./src/assets/images/planning.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">
+                        Consulting
                       </h3>
-                      <p class="text-sm text-[#696969] text-justify">Outsource your IT department to GVISION and experience the benefits of working with a team of experienced and certified IT professionals 
-                      </p></div>
-                      </div>
-                </div>
-              
+                      <p class="text-sm text-[#696969] text-justify">
+                        We're your go-to web consulting crew, helping businesses
+                        figure out the online game plan. From boosting websites
+                        to giving advice on web strategies, we're here to make
+                        the web work better for you.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-2"
+                      srcset="./src/assets/images/app-development.png"
+                      alt=""
+                    />
 
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">
+                        Desktop & Mobile Applications
+                      </h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        We're all about making cool apps for both your computer
+                        and your phone. Whether you're on a PC or scrolling on
+                        your mobile, we've got you covered with awesome APPS
+                        that's easy to use.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="mr-4"
+                      srcset="./src/assets/images/help-desk.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">SUPPORT</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        We have a team of experts who are dedicated to keeping
+                        your website running smoothly and looking great. We're
+                        here to help you with any technical problems or
+                        questions, so you can focus on your business.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <!-- Close button -->
           <div class="text-center">
-          <button class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
-            id="closeModalBtnTwo">
-            Close
-          </button>
+            <button
+              class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+              id="closeModalBtnThree"
+            >
+              Close
+            </button>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div
+      class="fixed inset-0 flex items-center justify-center z-50 hidden mx-auto m-auto"
+      id="modalContainer2"
+    >
+      <!-- Modal background overlay -->
+      <div class="fixed inset-0 bg-gray-900 opacity-50" id="modalOverlay"></div>
+
+      <!-- Modal content -->
+      <div
+        class="bg-white p-4 rounded-lg shadow-lg z-10 lg:max-w-[1100px] max-w-[370px] max-h-[670px] overflow-auto"
+      >
+        <div class="py-2 px-8">
+          <div>
+            <h1
+              class="text-[#004B76] text-2xl font-medium text-center lg:pb-0 pb-4"
+            >
+              Our Services
+            </h1>
+
+            <div class="lg:px-20 px-0">
+              <div class="grid lg:grid-cols-2 grid-cols-1 gap-2">
+                <div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4 lg:mt-2"
+                      srcset="./src/assets/images/ms.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">Microsoft</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        As a Microsoft Partner, we provide any type of
+                        consulting services, deployment, support and training
+                        for products such as Microsoft & Windows 365, Azure,
+                        Teams, Defender
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4"
+                      srcset="./src/assets/images/antivirus.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">Security</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        We are a proud partner of SOPHOS, the leader of the
+                        cyber security Industry. Let’s make your environment
+                        safer and your data secure
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4 mt-0"
+                      srcset="./src/assets/images/crp.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">ERP & CRM</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        We are the only Distributor in Belgium of AKEAD, an
+                        All-in-One ERP, POS Solution software.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-4"
+                      srcset="./src/assets/images/infrastructuree.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">
+                        Infrastructure
+                      </h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        With more than 20 years of experience, we provide any
+                        type of support for your IT infrastructure such as
+                        Computers, Servers, Storage, Backup and Network
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="pb-2 mr-2"
+                      srcset="./src/assets/images/voiip.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">VOIP</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        Partnering with 3CX, we offer a comprehensive suite of
+                        unified communication tools that can help your business
+                        improve your efficiency and productivity.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex lg:flex-row flex-col justify-start lg:items-start items-baseline lg:p-7 p-2 py-4"
+                  >
+                    <img
+                      class="mr-4"
+                      srcset="./src/assets/images/soutien-technique.png"
+                      alt=""
+                    />
+                    <div>
+                      <h3 class="text-lg text-[#00000] font-bold">SUPPORT</h3>
+                      <p class="text-sm text-[#696969] text-justify">
+                        Outsource your IT department to GVISION and experience
+                        the benefits of working with a team of experienced and
+                        certified IT professionals
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Close button -->
+          <div class="text-center">
+            <button
+              class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+              id="closeModalBtnTwo"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
 
       <!-- end -->
-</div>
-</div>
+    </div>
 
-
-      <script>
-        const openModalBtn = document.getElementById("openModalBtn");
-        const openModalBtnTwo = document.getElementById("openModalBtnTwo");
-
-        const openModalBtnThree = document.getElementById("openModalBtnThree");
-        const closeModalBtn = document.getElementById("closeModalBtn");
-        const modalContainer = document.getElementById("modalContainer");
-        const modalContainer2 = document.getElementById("modalContainer2"); 
-        const modalContainer3 = document.getElementById("modalContainer3"); 
-        const closeModalBtnTwo = document.getElementById("closeModalBtnTwo");
-        const closeModalBtnThree = document.getElementById("closeModalBtnThree");
-
-
-
-
-        openModalBtn.addEventListener("click", () => {
-          modalContainer.classList.remove("hidden");
-        });
-
-        openModalBtnThree.addEventListener("click", () => {
-          modalContainer3.classList.remove("hidden");
-        });
-
-        closeModalBtnThree.addEventListener("click", () => {
-          modalContainer3.classList.add("hidden");
-        });
-        
-
-        openModalBtnTwo.addEventListener("click", () => {
-          modalContainer2.classList.remove("hidden");
-        });
-        
-        closeModalBtn.addEventListener("click", () => {
-          modalContainer.classList.add("hidden");
-        });
-
-        closeModalBtn.addEventListener("click", () => {
-          modalContainer.classList.add("hidden");
-        });
-
-        closeModalBtnTwo.addEventListener("click", () => {
-          modalContainer2.classList.add("hidden");
-        });
-      </script>
     <script>
-      // Define variables for the text elements.
-      const englishText = document.getElementById("englishText");
-      const dutchText = document.getElementById("dutchText");
-      const frenchText = document.getElementById("frenchText");
+      const openModalBtn = document.getElementById("openModalBtn");
+      const openModalBtnTwo = document.getElementById("openModalBtnTwo");
 
-      // Define the flag icons for language selection.
-      const englishFlag = document.getElementById("englishFlag");
-      const dutchFlag = document.getElementById("dutchFlag");
-      const frenchFlag = document.getElementById("frenchFlag");
+      const openModalBtnThree = document.getElementById("openModalBtnThree");
+      const closeModalBtn = document.getElementById("closeModalBtn");
+      const modalContainer = document.getElementById("modalContainer");
+      const modalContainer2 = document.getElementById("modalContainer2");
+      const modalContainer3 = document.getElementById("modalContainer3");
+      const closeModalBtnTwo = document.getElementById("closeModalBtnTwo");
+      const closeModalBtnThree = document.getElementById("closeModalBtnThree");
 
-      // Function to display the English text.
-      function showEnglish() {
-        englishText.style.display = "block";
-        dutchText.style.display = "none";
-        frenchText.style.display = "none";
-      }
+      openModalBtn.addEventListener("click", () => {
+        modalContainer.classList.remove("hidden");
+      });
 
-      // Function to display the Dutch text.
-      function showDutch() {
-        englishText.style.display = "none";
-        dutchText.style.display = "block";
-        frenchText.style.display = "none";
-      }
+      openModalBtnThree.addEventListener("click", () => {
+        modalContainer3.classList.remove("hidden");
+      });
 
-      // Function to display the French text.
-      function showFrench() {
-        englishText.style.display = "none";
-        dutchText.style.display = "none";
-        frenchText.style.display = "block";
+      closeModalBtnThree.addEventListener("click", () => {
+        modalContainer3.classList.add("hidden");
+      });
+
+      openModalBtnTwo.addEventListener("click", () => {
+        modalContainer2.classList.remove("hidden");
+      });
+
+      closeModalBtn.addEventListener("click", () => {
+        modalContainer.classList.add("hidden");
+      });
+
+      closeModalBtn.addEventListener("click", () => {
+        modalContainer.classList.add("hidden");
+      });
+
+      closeModalBtnTwo.addEventListener("click", () => {
+        modalContainer2.classList.add("hidden");
+      });
+    </script>
+    <script>
+      // Define the flag elements using classes and data attributes.
+      const flagElements = document.querySelectorAll(".flag-icon");
+
+      // Function to change the language of the entire document.
+      function changeLanguage(selectedLang) {
+        // Loop through all language elements with the 'data-lang' attribute.
+        const languageElements = document.querySelectorAll(".language");
+        languageElements.forEach((element) => {
+          const lang = element.getAttribute("data-lang");
+          // Display elements with the selected language and hide others.
+          if (lang === selectedLang) {
+            element.style.display = "block";
+          } else {
+            element.style.display = "none";
+          }
+        });
       }
 
       // Add click event listeners to the flag icons.
-      englishFlag.addEventListener("click", showEnglish);
-      dutchFlag.addEventListener("click", showDutch);
-      frenchFlag.addEventListener("click", showFrench);
+      flagElements.forEach((flag) => {
+        flag.addEventListener("click", () => {
+          const selectedLang = flag.getAttribute("data-lang");
+          changeLanguage(selectedLang);
+        });
+      });
     </script>
-      
-</body>
-
+  </body>
 </html>
