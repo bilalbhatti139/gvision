@@ -11,7 +11,14 @@
 <body>
   <div class="w-full h-full bg-cover bg-no-repeat bg-contain h-full min-h-[971px]"
     style="background-image: url('./src/assets/images/bg.png')">
-    <!-- Content goes here -->
+    <!-- <button id="toggleLanguageButton">Switch Language</button>
+    <p id="englishText">
+      English
+    </p>
+    <p id="frenchText" style="display: none;">
+      Fren
+    </p> -->
+    
 
     <div class="pt-2 lg:pb-24 pb-12">
       <p class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5">
@@ -26,14 +33,20 @@
             <p class="text-2xl text-white font-bold leading-tight">We Act As Your Internal IT Department With a</p>
             <h1 class="text-white font-bold leading-tight capitalize">
               Single Point Of contact for all <span class="font-bold text-[#98EA98]"> Your Needs</span>
-
             </h1>
           </div>
-          <div class="flex relative mt-4 lg:mb-0 mb-4">
-            <div></div>
+          <div class="mt-4 lg:mb-0 mb-4">
             <a href="tel:+32(0)23159660"><img srcset="./src/assets/images/contact.png" alt="" /></a>
-       
+            <div class="flex mt-4">
+              <a href="https://maps.app.goo.gl/mP4RKUKoUMgEjLUr7" class="mr-5" target="_blank">
+                <img srcset="./src/assets/images/location.png" alt="" />
+              </a>
+                <a href="mailto:info@gvision.be">
+                  <img srcset="./src/assets/images/email.png" alt="" />
+                </a>
+              </div>
           </div>
+          
         </div>
         <div class="flex flex-col">
           <div
@@ -438,6 +451,34 @@
           modalContainer2.classList.add("hidden");
         });
       </script>
+      <script>
+        // Define variables for the English and French text elements.
+        const englishText = document.getElementById("englishText");
+        const frenchText = document.getElementById("frenchText");
+      
+        // Define the button for language switching.
+        const toggleLanguageButton = document.getElementById("toggleLanguageButton");
+      
+        // Set a variable to track the current language.
+        let isEnglish = true;
+      
+        // Function to toggle the language.
+        function toggleLanguage() {
+          if (isEnglish) {
+            englishText.style.display = "none";
+            frenchText.style.display = "block";
+            isEnglish = false;
+          } else {
+            frenchText.style.display = "none";
+            englishText.style.display = "block";
+            isEnglish = true;
+          }
+        }
+      
+        // Add a click event listener to the button.
+        toggleLanguageButton.addEventListener("click", toggleLanguage);
+      </script>
+      
 </body>
 
 </html>
