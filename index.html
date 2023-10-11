@@ -11,18 +11,27 @@
 <body>
   <div class="w-full h-full bg-cover bg-no-repeat bg-contain h-full min-h-[971px]"
     style="background-image: url('./src/assets/images/bg.png')">
-    <!-- <button id="toggleLanguageButton">Switch Language</button>
-    <p id="englishText">
-      English
-    </p>
-    <p id="frenchText" style="display: none;">
-      Fren
-    </p> -->
-    
+
+    <div class="flex justify-end items-center p-4">
+      <!-- <p class="text-2xl text-white font-bold leading-tight pr-5">Translate : </p> -->
+      <img id="englishFlag" class="cursor-pointer flag-icon pr-5" src="./src/assets/images/united-states.png" alt="English Flag">
+      <img id="dutchFlag" class="cursor-pointer flag-icon pr-5" src="./src//assets//images/netherlands.png" alt="Dutch Flag">
+      <img id="frenchFlag" class="cursor-pointer flag-icon" src="./src//assets/images/france.png" alt="French Flag">
+    </div>
 
     <div class="pt-2 lg:pb-24 pb-12">
-      <p class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5">
+      <!-- English -->
+      <p id="englishText" style="display: block;" class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5">
   Who’s responsible for the Computers ? the Printers ? the Phones ? the Alarm and the Security Camera’s ? <br />Don’t waste your time to find the right contact !! 
+      </p>
+      <!-- Dutch -->
+      <p id="dutchText" style="display: none;" class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5">
+        computerstoringen, e-mails, printers, telefoonproblemen, alarmsystemen en camera's? Krijg je het niet meer geregeld met al je verschillende serviceproviders? Maak je geen zorgen, wij zijn er om te helpen. 
+      </p>
+      <!-- French -->
+      <p id="frenchText" style="display: none;" class="lg:text-center text-left text-white font-poppins text-2xl font-semibold text-capitalize p-5">
+        Qui s’occupe des pannes informatiques, des mails, des imprimantes, des problèmes de téléphonie, de l’alarme et des caméras ? Vous vous en sortez plus avec tous les différents prestataires que vous avez ?
+        Ne vous inquiétez plus, nous sommes là pour vous. 
       </p>
     </div>
 
@@ -451,33 +460,43 @@
           modalContainer2.classList.add("hidden");
         });
       </script>
-      <script>
-        // Define variables for the English and French text elements.
-        const englishText = document.getElementById("englishText");
-        const frenchText = document.getElementById("frenchText");
-      
-        // Define the button for language switching.
-        const toggleLanguageButton = document.getElementById("toggleLanguageButton");
-      
-        // Set a variable to track the current language.
-        let isEnglish = true;
-      
-        // Function to toggle the language.
-        function toggleLanguage() {
-          if (isEnglish) {
-            englishText.style.display = "none";
-            frenchText.style.display = "block";
-            isEnglish = false;
-          } else {
-            frenchText.style.display = "none";
-            englishText.style.display = "block";
-            isEnglish = true;
-          }
-        }
-      
-        // Add a click event listener to the button.
-        toggleLanguageButton.addEventListener("click", toggleLanguage);
-      </script>
+    <script>
+      // Define variables for the text elements.
+      const englishText = document.getElementById("englishText");
+      const dutchText = document.getElementById("dutchText");
+      const frenchText = document.getElementById("frenchText");
+
+      // Define the flag icons for language selection.
+      const englishFlag = document.getElementById("englishFlag");
+      const dutchFlag = document.getElementById("dutchFlag");
+      const frenchFlag = document.getElementById("frenchFlag");
+
+      // Function to display the English text.
+      function showEnglish() {
+        englishText.style.display = "block";
+        dutchText.style.display = "none";
+        frenchText.style.display = "none";
+      }
+
+      // Function to display the Dutch text.
+      function showDutch() {
+        englishText.style.display = "none";
+        dutchText.style.display = "block";
+        frenchText.style.display = "none";
+      }
+
+      // Function to display the French text.
+      function showFrench() {
+        englishText.style.display = "none";
+        dutchText.style.display = "none";
+        frenchText.style.display = "block";
+      }
+
+      // Add click event listeners to the flag icons.
+      englishFlag.addEventListener("click", showEnglish);
+      dutchFlag.addEventListener("click", showDutch);
+      frenchFlag.addEventListener("click", showFrench);
+    </script>
       
 </body>
 
