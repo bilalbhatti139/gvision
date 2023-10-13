@@ -9,10 +9,12 @@
 
   <body>
     <div
-      class="w-full h-full bg-cover bg-no-repeat bg-contain h-screen"
+      class="w-full h-full bg-cover bg-no-repeat bg-contain lg:h-screen h-full"
       style="background-image: url('./src/assets/images/bg.png')"
     >
-      <div class="flex justify-between items-start">
+      <div
+        class="flex lg:flex-row flex-col-reverse justify-between items-start"
+      >
         <div class="pt-2 lg:pb-9 flex-1">
           <!-- English -->
           <p
@@ -74,7 +76,7 @@
         </div>
       </div>
 
-      <div class="px-14">
+      <div class="lg:px-14 px-7">
         <div class="grid lg:grid-cols-2 grid-cols-1">
           <div class="flex flex-col justify-center">
             <div class="text-3xl lg:text-7xl">
@@ -134,8 +136,8 @@
                 <span class="font-bold text-[#98EA98]"> vos besoins </span>
               </h1>
             </div>
-            <div class="flex mt-4 lg:mb-0 mb-4">
-              <div class="mr-4">
+            <div class="flex lg:flex-row flex-col lg:mb-0 mb-4 lg:mt-0 mt-4">
+              <div class="mr-4 lg:mb-0 mb-5">
                 <a href="tel:+32(0)23159660"
                   ><img
                     srcset="./src/assets/images/contact.png"
@@ -192,7 +194,7 @@
                 </a>
               </div>
             </div>
-            <div class="flex mt-4">
+            <div class="flex mt-4 lg:mb-0 mb-5">
               <a
                 href="https://maps.app.goo.gl/mP4RKUKoUMgEjLUr7"
                 class="mr-5"
