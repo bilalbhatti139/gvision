@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>GVISION - Your IT Department - Votre Département IT</title>
-    <link rel="icon" type="image/x-icon" href="./src/assets/images/fav.png" />
+    <link rel="icon" type="image/png" href="./src/assets/images/faviconn.png" />
   </head>
 
   <body>
@@ -276,35 +276,35 @@
                     Nos services
                   </span>
                 </button>
-
-                <button
-                  id="openModalBtnFive"
-                  class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
-                >
-                  <span
-                    style="display: block"
-                    data-lang="english"
-                    class="language"
+                <a href="https://repairfinder.be/" id="buttonLink">
+                  <button
+                    class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
                   >
-                    View Website</span
-                  >
-                  <span
-                    id="dutchText"
-                    style="display: none"
-                    class="language"
-                    data-lang="dutch"
-                  >
-                    Bezoek Website
-                  </span>
-                  <span
-                    id="frenchText"
-                    style="display: none"
-                    data-lang="french"
-                    class="language"
-                  >
-                    Visiter notre site
-                  </span>
-                </button>
+                    <span
+                      style="display: block"
+                      data-lang="english"
+                      class="language"
+                    >
+                      View Website</span
+                    >
+                    <span
+                      id="dutchText"
+                      style="display: none"
+                      class="language"
+                      data-lang="dutch"
+                    >
+                      Bezoek Website
+                    </span>
+                    <span
+                      id="frenchText"
+                      style="display: none"
+                      data-lang="french"
+                      class="language"
+                    >
+                      Visiter notre site
+                    </span>
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -1687,14 +1687,14 @@
 
       <!-- end -->
     </div>
-    <div
+    <!-- <div
       class="fixed inset-0 flex items-center justify-center z-50 hidden mx-auto m-auto"
       id="modalContainer5"
     >
-      <!-- Modal background overlay -->
+    
       <div class="fixed inset-0 bg-gray-900 opacity-50" id="modalOverlay"></div>
 
-      <!-- Modal content -->
+     
       <div
         class="bg-white p-4 rounded-lg shadow-lg z-10 lg:max-w-[1100px] max-w-[370px] max-h-[770px] overflow-auto"
       >
@@ -1702,7 +1702,7 @@
           <div>
             <h3 class="font-bold text-3xl pb-3">Coming Soon</h3>
           </div>
-          <!-- Close button -->
+          
           <div class="text-center">
             <button
               class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
@@ -1714,8 +1714,7 @@
         </div>
       </div>
 
-      <!-- end -->
-    </div>
+    </div> -->
 
     <div
       class="fixed inset-0 flex items-center justify-center z-50 hidden mx-auto m-auto"
@@ -1757,7 +1756,7 @@
       const modalContainer2 = document.getElementById("modalContainer2");
       const modalContainer3 = document.getElementById("modalContainer3");
       const modalContainer4 = document.getElementById("modalContainer4");
-      const modalContainer5 = document.getElementById("modalContainer5");
+
       const modalContainer6 = document.getElementById("modalContainer6");
       const closeModalBtnTwo = document.getElementById("closeModalBtnTwo");
       const closeModalBtnThree = document.getElementById("closeModalBtnThree");
@@ -1773,9 +1772,7 @@
       openModalBtnFour.addEventListener("click", () => {
         modalContainer4.classList.remove("hidden");
       });
-      openModalBtnFive.addEventListener("click", () => {
-        modalContainer5.classList.remove("hidden");
-      });
+
       openModalBtnSix.addEventListener("click", () => {
         modalContainer6.classList.remove("hidden");
       });
@@ -1801,9 +1798,7 @@
       closeModalBtnFour.addEventListener("click", () => {
         modalContainer4.classList.add("hidden");
       });
-      closeModalBtnFive.addEventListener("click", () => {
-        modalContainer5.classList.add("hidden");
-      });
+
       closeModalBtnSix.addEventListener("click", () => {
         modalContainer6.classList.add("hidden");
       });
