@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>gvision</title>
+    <title>GVISION - Your IT Department - Votre Département IT</title>
+    <link rel="icon" type="image/x-icon" href="./src/assets/images/fav.png" />
   </head>
 
   <body>
@@ -53,8 +54,15 @@
         </div>
         <div class="flex justify-end items-center p-4">
           <img
-            id="englishFlag"
+            id="frenchFlag"
             class="cursor-pointer flag-icon"
+            src="./src/assets/images/FR.png"
+            alt="French Flag"
+            data-lang="french"
+          />
+          <img
+            id="englishFlag"
+            class="cursor-pointer flag-icon p-4"
             src="./src/assets/images/EN.png"
             alt="English Flag"
             data-lang="english"
@@ -65,13 +73,6 @@
             src="./src/assets/images/NL.png"
             alt="Dutch Flag"
             data-lang="dutch"
-          />
-          <img
-            id="frenchFlag"
-            class="cursor-pointer flag-icon"
-            src="./src/assets/images/FR.png"
-            alt="French Flag"
-            data-lang="french"
           />
         </div>
       </div>
@@ -136,7 +137,9 @@
                 <span class="font-bold text-[#98EA98]"> vos besoins </span>
               </h1>
             </div>
-            <div class="flex lg:flex-row flex-col lg:mb-0 mb-4 lg:mt-0 mt-4">
+            <div
+              class="flex items-center lg:flex-row flex-col lg:mb-0 mb-4 lg:mt-0 mt-4"
+            >
               <div class="mr-4 lg:mb-0 mb-5">
                 <a href="tel:+32(0)23159660"
                   ><img
@@ -167,29 +170,12 @@
               <div>
                 <a
                   href="https://api.whatsapp.com/message/7ARFSPBANMO6G1?autoload=1&app_absent=0"
+                  target="_blank"
                 >
                   <img
                     srcset="./src/assets/images/whatsapp.png"
                     alt=""
                     style="display: block"
-                    data-lang="english"
-                    class="language"
-                  />
-                  <img
-                    srcset="./src/assets/images/w.f.png"
-                    alt=""
-                    id="dutchText"
-                    style="display: none"
-                    data-lang="dutch"
-                    class="language"
-                  />
-                  <img
-                    srcset="./src/assets/images/w.d.png"
-                    alt=""
-                    id="frenchText"
-                    style="display: none"
-                    data-lang="french"
-                    class="language"
                   />
                 </a>
               </div>
@@ -244,6 +230,7 @@
                   </span>
                 </button>
                 <button
+                  id="openModalBtnSix"
                   class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
                 >
                   <span
@@ -309,6 +296,7 @@
                 </button>
 
                 <button
+                  id="openModalBtnFive"
                   class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
                 >
                   <span
@@ -378,6 +366,7 @@
                     </span>
                   </button>
                   <button
+                    id="openModalBtnFour"
                     class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
                   >
                     <span
@@ -1690,6 +1679,95 @@
       <!-- end -->
     </div>
 
+    <div
+      class="fixed inset-0 flex items-center justify-center z-50 hidden mx-auto m-auto"
+      id="modalContainer4"
+    >
+      <!-- Modal background overlay -->
+      <div class="fixed inset-0 bg-gray-900 opacity-50" id="modalOverlay"></div>
+
+      <!-- Modal content -->
+      <div
+        class="bg-white p-4 rounded-lg shadow-lg z-10 lg:max-w-[1100px] max-w-[370px] max-h-[770px] overflow-auto"
+      >
+        <div class="py-4 px-20">
+          <div>
+            <h3 class="font-bold text-3xl pb-3">Coming Soon</h3>
+          </div>
+          <!-- Close button -->
+          <div class="text-center">
+            <button
+              class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+              id="closeModalBtnFour"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- end -->
+    </div>
+    <div
+      class="fixed inset-0 flex items-center justify-center z-50 hidden mx-auto m-auto"
+      id="modalContainer5"
+    >
+      <!-- Modal background overlay -->
+      <div class="fixed inset-0 bg-gray-900 opacity-50" id="modalOverlay"></div>
+
+      <!-- Modal content -->
+      <div
+        class="bg-white p-4 rounded-lg shadow-lg z-10 lg:max-w-[1100px] max-w-[370px] max-h-[770px] overflow-auto"
+      >
+        <div class="py-4 px-20">
+          <div>
+            <h3 class="font-bold text-3xl pb-3">Coming Soon</h3>
+          </div>
+          <!-- Close button -->
+          <div class="text-center">
+            <button
+              class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+              id="closeModalBtnFive"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- end -->
+    </div>
+
+    <div
+      class="fixed inset-0 flex items-center justify-center z-50 hidden mx-auto m-auto"
+      id="modalContainer6"
+    >
+      <!-- Modal background overlay -->
+      <div class="fixed inset-0 bg-gray-900 opacity-50" id="modalOverlay"></div>
+
+      <!-- Modal content -->
+      <div
+        class="bg-white p-4 rounded-lg shadow-lg z-10 lg:max-w-[1100px] max-w-[370px] max-h-[770px] overflow-auto"
+      >
+        <div class="py-4 px-20">
+          <div>
+            <h3 class="font-bold text-3xl pb-3">Coming Soon</h3>
+          </div>
+          <!-- Close button -->
+          <div class="text-center">
+            <button
+              class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+              id="closeModalBtnSix"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- end -->
+    </div>
+
     <script>
       const openModalBtn = document.getElementById("openModalBtn");
       const openModalBtnTwo = document.getElementById("openModalBtnTwo");
@@ -1699,6 +1777,9 @@
       const modalContainer = document.getElementById("modalContainer");
       const modalContainer2 = document.getElementById("modalContainer2");
       const modalContainer3 = document.getElementById("modalContainer3");
+      const modalContainer4 = document.getElementById("modalContainer4");
+      const modalContainer5 = document.getElementById("modalContainer5");
+      const modalContainer6 = document.getElementById("modalContainer6");
       const closeModalBtnTwo = document.getElementById("closeModalBtnTwo");
       const closeModalBtnThree = document.getElementById("closeModalBtnThree");
 
@@ -1710,6 +1791,15 @@
         modalContainer3.classList.remove("hidden");
       });
 
+      openModalBtnFour.addEventListener("click", () => {
+        modalContainer4.classList.remove("hidden");
+      });
+      openModalBtnFive.addEventListener("click", () => {
+        modalContainer5.classList.remove("hidden");
+      });
+      openModalBtnSix.addEventListener("click", () => {
+        modalContainer6.classList.remove("hidden");
+      });
       closeModalBtnThree.addEventListener("click", () => {
         modalContainer3.classList.add("hidden");
       });
@@ -1728,6 +1818,15 @@
 
       closeModalBtnTwo.addEventListener("click", () => {
         modalContainer2.classList.add("hidden");
+      });
+      closeModalBtnFour.addEventListener("click", () => {
+        modalContainer4.classList.add("hidden");
+      });
+      closeModalBtnFive.addEventListener("click", () => {
+        modalContainer5.classList.add("hidden");
+      });
+      closeModalBtnSix.addEventListener("click", () => {
+        modalContainer6.classList.add("hidden");
       });
     </script>
     <script>
