@@ -213,7 +213,6 @@
                   target="_blank"
                 >
                   <button
-                    id="openModalBtnSix"
                     class="text-xs font-medium text-[#004B76] hover:text-white space-x-2 px-8 py-2 rounded-lg border border-[#004B76] hover:bg-[#004B76] hover:color-white relative"
                   >
                     <span
@@ -1741,7 +1740,6 @@
           <div class="text-center">
             <button
               class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
-              id="closeModalBtnSix"
             >
               Close
             </button>
@@ -1763,7 +1761,6 @@
       const modalContainer3 = document.getElementById("modalContainer3");
       const modalContainer4 = document.getElementById("modalContainer4");
 
-      const modalContainer6 = document.getElementById("modalContainer6");
       const closeModalBtnTwo = document.getElementById("closeModalBtnTwo");
       const closeModalBtnThree = document.getElementById("closeModalBtnThree");
 
@@ -1779,9 +1776,6 @@
         modalContainer4.classList.remove("hidden");
       });
 
-      openModalBtnSix.addEventListener("click", () => {
-        modalContainer6.classList.remove("hidden");
-      });
       closeModalBtnThree.addEventListener("click", () => {
         modalContainer3.classList.add("hidden");
       });
@@ -1803,10 +1797,6 @@
       });
       closeModalBtnFour.addEventListener("click", () => {
         modalContainer4.classList.add("hidden");
-      });
-
-      closeModalBtnSix.addEventListener("click", () => {
-        modalContainer6.classList.add("hidden");
       });
     </script>
     <script>
